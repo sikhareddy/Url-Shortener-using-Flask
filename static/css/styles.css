@@ -1,0 +1,23 @@
+body {
+    background-color: powderblue;
+     
+  }
+  table {
+    border-collapse: collapse;
+    
+  }
+  .table1 {
+    counter-reset: serial-number;
+  }
+
+  .table1 td:first-child:before {
+    counter-increment: serial-number;  /* Increment the serial number counter */
+    content: counter(serial-number);  /* Display the counter */
+  }
+
+  td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+  }
+

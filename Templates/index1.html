@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+
+
+{% endblock %}
+
+{% block body %}
+<script>
+(function(){
+    new Clipboard('#copy-button');
+})();
+</script>
+<br />
+<h1> Welcome to the URL Shortener web app</h1>
+
+<br/>
+
+<form method='post'>
+    
+
+    <label>Enter URL</label>
+    <input type="text" name="in_1" placeholder="Enter the URL" >
+       <button>Submit</button>
+</form>
+
+
+<form  method="post"> 
+
+  <input id='short-link' value= "http://127.0.0.1:5000/{{ short }}" />  
+
+   <button class="btn ui button" type='button' id="copy-button" data-clipboard-target="#short-link">Copy</button>
+
+    
+
+
+{% endblock %}
+
